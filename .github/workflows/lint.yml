@@ -6,6 +6,9 @@ jobs:
   lint_javascript:
     name: Lint JavaScript Files
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
     steps:
       - name: Check out branch
         uses: actions/checkout@v3
