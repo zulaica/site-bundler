@@ -1,0 +1,20 @@
+name: Test Code Base
+
+on: pull_request
+
+jobs:
+  test_javascript:
+    name: Test JavaScript Files
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: volta-cli/action@v1
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests
+        run: npm test
