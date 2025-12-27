@@ -1,10 +1,10 @@
-name: Lint Code Base
+name: Test Code Base
 
 on: pull_request
 
 jobs:
-  lint_javascript:
-    name: Lint JavaScript Files
+  test_javascript:
+    name: Test JavaScript Files
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -16,5 +16,5 @@ jobs:
         uses: volta-cli/action@v1
       - name: Install dependencies
         run: npm ci
-      - name: Run lint script
-        run: npm run lint
+      - name: Run tests
+        run: npm test

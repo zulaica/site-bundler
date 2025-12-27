@@ -1,7 +1,7 @@
 {
   "name": "@zulaica/site-bundler",
   "author": "David Zulaica",
-  "version": "0.6.4",
+  "version": "0.7.0",
   "type": "module",
   "engines": {
     "node": ">=24.12.0"
@@ -20,7 +20,9 @@
   ],
   "scripts": {
     "lint": "eslint \"lib/**\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test node --test --test-concurrency=1 --require \"./lib/helpers/tests.mjs\"",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "npm run test -- --experimental-test-coverage"
   },
   "repository": {
     "type": "git",
