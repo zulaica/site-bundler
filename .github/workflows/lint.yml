@@ -11,9 +11,9 @@ jobs:
       issues: write
     steps:
       - name: Check out branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
       - name: Install Node.js
-        uses: volta-cli/action@v1
+        uses: volta-cli/action@v5
       - name: Install dependencies
         run: npm ci
       - name: Run lint script
