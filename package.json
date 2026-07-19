@@ -1,7 +1,7 @@
 {
   "name": "@zulaica/site-bundler",
   "author": "David Zulaica",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "type": "module",
   "engines": {
     "node": ">=24.18.0"
@@ -22,7 +22,7 @@
     "lint": "eslint \"lib/**\"",
     "test": "NODE_ENV=test node --test --test-concurrency=1 --require \"./lib/helpers/tests.mjs\"",
     "test:watch": "npm run test -- --watch",
-    "test:coverage": "npm run test -- --experimental-test-coverage"
+    "test:coverage": "npm run test -- --experimental-test-coverage --test-coverage-exclude=\"**/helpers/**\" --test-coverage-exclude=\"**/*.test.mjs\""
   },
   "repository": {
     "type": "git",
@@ -58,5 +58,8 @@
   },
   "volta": {
     "node": "24.18.0"
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true
   }
 }
