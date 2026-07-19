@@ -36,7 +36,7 @@
     "@babel/core": "7.28.5",
     "@babel/parser": "7.28.5",
     "@babel/preset-env": "7.28.5",
-    "commander": "14.0.2",
+    "commander": "15.0.0",
     "cssnano": "8.0.2",
     "cssnano-preset-advanced": "8.0.2",
     "htmlnano": "3.4.0",
